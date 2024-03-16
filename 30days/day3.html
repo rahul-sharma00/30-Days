@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beating heart</title>
+    <style>
+        .img{
+            margin:100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        img{
+            width: 250px;
+            height: 250px;
+            animation: beat 4s 0ms infinite;
+            
+        }
+
+        @keyframes beat {
+            0%{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            25%{
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50%{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            75%{
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            100%{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img src="images/heart.png">
+    </div>
+</body>
+</html>
