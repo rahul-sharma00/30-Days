@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Car</title>
+    <style>
+        .container {
+            margin: 60px auto;
+            width: 90%;
+            height: 500px;
+            display: flex;
+            align-items: last baseline;
+            justify-content: left;
+            position: relative;
+        }
+
+        .wheel1,
+        .wheel2 {
+            position: absolute;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            background-color: #000;
+            left: 215px;
+            bottom: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            animation: rotate 800ms linear none infinite;
+            z-index: 2;
+
+        }
+
+        .wheel2 {
+            left: 552px;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .inner {
+            width: 50%;
+            height: 50%;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        span {
+            width: 95px;
+            height: 10px;
+            background-color: #fff;
+            position: absolute;
+        }
+
+        .ver {
+            transform: rotate(90deg);
+        }
+
+        #bg {
+            position: absolute;
+            width: 20000px;
+            height: 100%;
+            animation-name: roll2;
+            animation-duration: 4s;
+            animation-delay: 0ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes roll2 {
+            100% {
+                transform: translatex(-2000px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/road.jpg" id="bg">
+        <img src="images/car.png" alt="" style="z-index: 1;">
+        <div class="wheel1">
+            <span></span>
+            <span class="ver"></span>
+            <div class="inner">
+
+            </div>
+        </div>
+        <div class="wheel2">
+            <span></span>
+            <span class="ver"></span>
+            <div class="inner">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

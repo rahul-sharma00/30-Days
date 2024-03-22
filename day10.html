@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Loader</title>
+
+    <style>
+        body{
+            background: #000;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer{
+            width: 200px;
+            height: 200px;
+            background:linear-gradient(white,gray,black,darkgray);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            box-shadow: 0px 0px 15px #fff;
+            animation-delay: none;
+        }
+
+        @keyframes rotate {
+           100%{
+            transform: rotate(360deg);
+           }
+        }
+        .inner{
+            width: 90%;
+            height: 90%;
+            background:#000;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>

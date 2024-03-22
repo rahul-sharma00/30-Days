@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover profiles</title>
+    <style>
+        h1{
+            color: royalblue;
+            margin: 50px;
+        }
+        .container{
+            width: 100%;
+            display: grid;
+            grid-template-columns:repeat(10,40px);
+            transition:  grid-template-columns 500ms;
+            transition-delay: 50ms;
+            margin-left: 50px;
+        }
+
+        .container:hover{
+            grid-template-columns:repeat(10,100px); 
+        }
+
+        .profile{
+            width: 70px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(214, 214, 214);
+            border: 5px solid #f1f1f1;
+            box-shadow: 0px 0px 5px #000;
+            transition: scale 500ms;
+            transition-delay: 60ms;
+        }
+
+        .profile:hover{
+          scale: 1.7;
+          z-index: 1; 
+          cursor: pointer;
+        }
+
+         .profile:hover +.profile, .profile:has( +.profile:hover){
+            scale: 1.45;
+         }
+    </style>
+</head>
+<body>
+    <h1>Our Members</h1>
+    <div class="container">
+        <img src="images/m-1.jpg" alt="" class="profile">
+        <img src="images/m-2.jpg" alt="" class="profile">
+        <img src="images/m-3.jpg" alt="" class="profile">
+        <img src="images/m-4.jpg" alt="" class="profile">
+        <img src="images/m-5.jpg" alt="" class="profile">
+        <img src="images/m-6.jpg" alt="" class="profile">
+        <img src="images/m-7.jpg" alt="" class="profile">
+        <img src="images/m-8.jpg" alt="" class="profile">
+        <img src="images/m-9.jpg" alt="" class="profile">
+        <img src="images/m-10.jpg" alt="" class="profile">
+    </div>
+</body>
+</html>

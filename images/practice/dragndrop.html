@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            border: 1px solid lightblue;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img src="Snake.png" id="currImage">
+    <img src="Cup.png" id="OthImage">
+
+
+    <script>
+    let current = document.getElementById("currImage");
+    let other = document.getElementById("OthImage");
+    current.addEventListener("dragstart", dragStart);
+    current.addEventListener("dragover", dragOver);
+    current.addEventListener("dragenter", dragEnter);
+    current.addEventListener("dragleave",dragLeave);
+    current.addEventListener("drop", dragDrop);
+    current.addEventListener("dragend", dragEnd);
+
+        function dragStart() {
+         current=this   
+        }
+
+        function dragOver(e){
+            e.preventDefault();
+        }
+
+        function dragEnter(e){
+            e.preventDefault();
+        }
+
+        function dragLeave(e){
+            e.preventDefault();
+        }
+
+        function dragDrop(){
+            other=this;
+        }
+
+        function dragEnd(){
+            let currImage=current.src;
+            let otherImage=other.src;
+
+            current.src=otherImage;
+            other.src=currImage;
+        }
+    </script>
+</body>
+</html>

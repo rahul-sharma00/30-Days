@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffice Light</title>
+    <style>
+        body{
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+     .light{
+        width: 80px;
+        height: 220px;
+        background: #000;
+        border-radius: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+     }  
+     
+     .red,.orange,.green{
+        width: 60px;
+        height: 60px;
+        background-color: #252121;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1px;
+     }
+
+     .red{
+        animation: blink 1s none;
+        transition: all 600ms ease-in-out;
+        animation-iteration-count: 3
+        ;
+     }
+
+     .orange{
+        
+        animation: blink2 1s none;
+        transition: all 600ms ease-in-out;
+        animation-iteration-count: 3
+        ;
+        animation-delay: 4s;
+     }
+
+     .green{
+        animation: blink3 1s none;
+        transition: all 600ms ease-in-out;
+        animation-iteration-count: 3
+        ;
+        animation-delay: 8s;
+     }
+
+     @keyframes blink {
+        100%{
+            background: red;
+        }
+     }
+     @keyframes blink2 {
+        100%{
+            background: orangered;
+        }
+     }
+     @keyframes blink3 {
+        100%{
+            background: green;
+        }
+     }
+    </style>
+</head>
+<body>
+    <div class="light">
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="green"></div>
+    </div>
+</body>
+</html>
