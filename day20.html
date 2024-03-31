@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pop-up text</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .text h1{
+            font-family:cursive;
+            color: rgb(250, 35, 35);
+            font-size: 3vw;
+            animation: pop 800ms  none; 
+        }
+
+        @keyframes pop {
+            0%{
+                scale: 0.2;
+            }
+
+           90%{
+                scale: 1.3;
+            }
+
+            100%{
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <h1>Rahul Sharma</h1>
+    </div>
+</body>
+</html>

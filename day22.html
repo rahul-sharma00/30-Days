@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .card-container {
+        width: 450px;
+        padding: 30px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px gray;
+    }
+
+    .card::after {
+        content: "";
+        width: 100%;
+        height: 150px;
+        background: #000;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        position: absolute;
+        top: 0px;
+        z-index: -5;
+    }
+
+    #dp {
+        aspect-ratio: 1;
+        margin-top: 90px;
+        border: 5px solid rgb(255, 252, 252);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        filter: brightness(0.9);
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .info h1 {
+        margin: 10px;
+        color: #252525;
+    }
+
+    .info p,
+    h3 {
+        text-align: center;
+        color: gray;
+        padding: 5px;
+    }
+
+    .social-links {
+        margin: 20px;
+    }
+
+    .social-links i {
+        font-size: 20px;
+        border: 1px solid;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        color: #fff;
+        background: gray;
+        transition: all 600ms;
+    }
+
+
+    .social-links i:hover {
+        background: #000;
+        scale: 1.1;
+        cursor: pointer;
+    }
+
+    .actions {
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 120px;
+        height: 35px;
+        font-size: 18px;
+        background: #252525;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: all 400ms;
+    }
+
+    button:hover {
+        background: #000;
+        scale: 1.1;
+    }
+</style>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="images/dp.jpeg" id="dp">
+            <div class="info">
+                <h1>Rahul Sharma</h1>
+                <h3>Frontend Engineer</h3>
+                <p>An expert Frontend developer with 5+ years of experience in industry</p>
+            </div>
+            <div class="social-links">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-youtube"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+            <div class="actions">
+                <button>Hire me</button>
+                <button><i class="fa fa-whatsapp"></i> Chat</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

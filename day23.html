@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .social-links {
+      display: grid;  
+      grid-template-columns: repeat(5,1px);
+      transition: all 600ms;
+    }
+
+    .social-links:hover{
+        grid-template-columns: repeat(5,50px);
+    }
+    .social-links i {
+        font-size: 20px;
+        border: 1px solid;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        color: #fff;
+        background: gray;
+        transition: all 600ms;
+    }
+
+
+    .social-links i:hover {
+        background: #000;
+        scale: 1.2;
+        cursor: pointer;
+        grid-template-columns: repeat(5,50px);
+    }
+   
+</style>
+
+<body>
+    <div class="social-links">
+        <i class="fa fa-facebook" style="z-index: 12;"></i>
+        <i class="fa fa-youtube"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-whatsapp"></i>
+    </div>
+</body>
+</html>
